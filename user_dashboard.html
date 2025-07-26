@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Digital Complain Box</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header class="header">
+        <div class="website-name">Complain Box</div>
+        <nav class="user-nav">
+            <a href="user_dashboard.html" class="nav-item active">Dashboard</a>
+            <a href="#" class="nav-item">Logout</a> </nav>
+    </header>
+
+    <main class="main-content dashboard-content">
+        <div class="dashboard-container">
+            <h2>Welcome, User!</h2>
+
+            <div class="dashboard-sections">
+                <div class="section-card" id="submit-complaint-section">
+                    <h3>Submit a New Complaint</h3>
+                    <form action="#" method="POST" class="complaint-submission-form">
+                        <div class="input-group">
+                            <label for="complaint_subject">Subject:</label>
+                            <input type="text" id="complaint_subject" name="subject" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="complaint_description">Description:</label>
+                            <textarea id="complaint_description" name="description" rows="7" required></textarea>
+                        </div>
+                        <div class="input-group checkbox-group">
+                            <input type="checkbox" id="anonymous_complaint" name="anonymous">
+                            <label for="anonymous_complaint">Submit Anonymously</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Complaint</button>
+                    </form>
+                </div>
+
+                <div class="section-card" id="my-complaints-section">
+                    <h3>My Complaint History</h3>
+                    <div class="complaints-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Subject</th>
+                                    <th>Date Submitted</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user-complaints-list">
+                                <tr>
+                                    <td data-label="ID">U001</td>
+                                    <td data-label="Subject">Loud music from next door</td>
+                                    <td data-label="Date Submitted">2025-07-21</td>
+                                    <td data-label="Status" class="status-new">New</td>
+                                    <td data-label="Actions"><button class="view-btn">View Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">U002</td>
+                                    <td data-label="Subject">Garbage disposal issue</td>
+                                    <td data-label="Date Submitted">2025-07-15</td>
+                                    <td data-label="Status" class="status-in-progress">In Progress</td>
+                                    <td data-label="Actions"><button class="view-btn">View Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">U003</td>
+                                    <td data-label="Subject">Broken light in hallway</td>
+                                    <td data-label="Date Submitted">2025-07-10</td>
+                                    <td data-label="Status" class="status-resolved">Resolved</td>
+                                    <td data-label="Actions"><button class="view-btn">View Details</button></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    <button class="btn-primary" onclick="location.href='#all-user-complaints'">View All My Complaints</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Digital Complain Box. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

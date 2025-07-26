@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Digital Complain Box</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header class="header">
+        <div class="website-name">Complain Box</div>
+        <nav class="admin-nav">
+            <a href="admin_dashboard.html" class="nav-item active">Dashboard</a>
+            <a href="#" class="nav-item">Logout</a> </nav>
+    </header>
+
+    <main class="main-content dashboard-content">
+        <div class="dashboard-container">
+            <h2>Welcome, Admin!</h2>
+
+            <div class="dashboard-sections">
+                <div class="section-card" id="complaints-section">
+                    <h3>Recent Complaints</h3>
+                    <div class="complaints-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Complainant</th>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="complaints-list">
+                                <tr>
+                                    <td>001</td>
+                                    <td>John Doe</td>
+                                    <td>Leaky Faucet in Apt 101</td>
+                                    <td>2025-07-20</td>
+                                    <td class="status-new">New</td>
+                                    <td><button class="view-btn">View</button> <button class="resolve-btn">Resolve</button></td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Anonymous</td>
+                                    <td>Noise Complaint from Apt 305</td>
+                                    <td>2025-07-19</td>
+                                    <td class="status-in-progress">In Progress</td>
+                                    <td><button class="view-btn">View</button> <button class="resolve-btn">Resolve</button></td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Jane Smith</td>
+                                    <td>Broken Elevator</td>
+                                    <td>2025-07-18</td>
+                                    <td class="status-resolved">Resolved</td>
+                                    <td><button class="view-btn">View</button></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    <button class="btn-primary" onclick="location.href='#all-complaints'">View All Complaints</button>
+                </div>
+
+                <div class="section-card" id="announcement-management-section">
+                    <h3>Announcement Management</h3>
+                    <form action="#" method="POST" class="announcement-form">
+                        <div class="input-group">
+                            <label for="announcement_title">Announcement Title:</label>
+                            <input type="text" id="announcement_title" name="title" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="announcement_content">Content:</label>
+                            <textarea id="announcement_content" name="content" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Add Announcement</button>
+                    </form>
+
+                    <h4>Current Announcements</h4>
+                    <ul id="current-announcements-list" class="current-announcements-list">
+                        <li>
+                            <span class="announcement-list-item-title">Important Maintenance Notice</span>
+                            <span class="announcement-list-item-date">(July 22, 2025)</span>
+                            <button class="delete-btn">Delete</button>
+                        </li>
+                        <li>
+                            <span class="announcement-list-item-title">Community Meeting Reminder</span>
+                            <span class="announcement-list-item-date">(July 18, 2025)</span>
+                            <button class="delete-btn">Delete</button>
+                        </li>
+                        </ul>
+                </div>
+
+                <div class="section-card" id="user-management-section">
+                    <h3>User Management</h3>
+                    <div class="users-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Apartment/Unit</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user-list">
+                                <tr>
+                                    <td>101</td>
+                                    <td>john.doe</td>
+                                    <td>Apt 101</td>
+                                    <td class="status-active">Active</td>
+                                    <td><button class="reset-password-btn">Reset Pass</button> <button class="deactivate-btn">Deactivate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>jane.smith</td>
+                                    <td>Apt 205</td>
+                                    <td class="status-active">Active</td>
+                                    <td><button class="reset-password-btn">Reset Pass</button> <button class="deactivate-btn">Deactivate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>user_15</td>
+                                    <td>Apt 301</td>
+                                    <td class="status-inactive">Inactive</td>
+                                    <td><button class="reset-password-btn">Reset Pass</button> <button class="activate-btn">Activate</button></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    <button class="btn-primary" onclick="location.href='#add-new-user'">Add New User</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Digital Complain Box. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

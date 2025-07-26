@@ -1,0 +1,589 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light grey background */
+    color: #333; /* Darker text for readability */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Header Styles */
+.header {
+    background-color: #2c3e50; /* Dark blue-grey header */
+    color: #ecf0f1; /* Light text for contrast */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end; /* Push content to the right */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.website-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1; /* Allows main content to take up available space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+}
+
+.options-container {
+    display: flex; /* Use flexbox for the options */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between the boxes */
+    justify-content: center; /* Center boxes if they wrap */
+    max-width: 900px; /* Limit container width */
+    width: 100%;
+}
+
+.option-box {
+    background-color: #ffffff; /* White background for boxes */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    color: #2c3e50; /* Dark text for box titles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    flex: 1; /* Allow boxes to grow and shrink */
+    min-width: 250px; /* Minimum width for boxes */
+    max-width: 300px; /* Maximum width for boxes */
+    display: flex; /* Use flex to center h2 vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+.option-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background-color: #e9ecef; /* Slightly darker background on hover */
+}
+
+.option-box h2 {
+    margin: 0; /* Remove default margin from h2 */
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #34495e; /* Slightly darker shade for footer */
+    color: #bdc3c7; /* Lighter text for copyright */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow above footer */
+}
+
+/* --- Admin/User Login Page Specific Styles --- */
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 450px; /* Limit width of the login box */
+    width: 90%; /* Responsive width */
+    margin: auto; /* Center the container itself if not flexed by parent */
+}
+
+.login-container h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.login-form .input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left within their group */
+}
+
+.login-form label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.1em;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #3498db; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.login-button {
+    background-color: #3498db; /* Blue button */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.back-link {
+    margin-top: 25px;
+    font-size: 1em;
+}
+
+.back-link a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* --- Announcement Page Specific Styles --- */
+
+.announcement-page-container {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    max-width: 800px; /* Wider for announcements */
+    width: 90%;
+    margin: auto; /* Center the container */
+    text-align: left; /* Align text within announcements */
+}
+
+.announcement-page-container h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center; /* Center the main heading */
+}
+
+.announcements-list {
+    margin-top: 20px;
+}
+
+.announcement-item {
+    background-color: #f8f9fa; /* Slightly off-white for individual announcements */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px; /* Space between announcements */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.announcement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.announcement-title {
+    color: #3498db; /* Blue for titles */
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.announcement-date {
+    font-size: 0.9em;
+    color: #7f8c8d; /* Grey for dates */
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+.announcement-content p {
+    line-height: 1.7; /* Improve readability of body text */
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* --- Admin Dashboard Specific Styles --- */
+
+/* Adjust main content for dashboard layout */
+.main-content.dashboard-content {
+    align-items: flex-start; /* Align content to the top within main */
+    padding: 30px 20px; /* More vertical padding */
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px; /* Wider container for dashboard */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the whole dashboard area */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* Admin Navigation within Header */
+.admin-nav {
+    margin-left: auto; /* Push nav to the right */
+    display: flex;
+    gap: 20px;
+}
+
+.admin-nav .nav-item {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-nav .nav-item:hover,
+.admin-nav .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dashboard Sections Layout */
+.dashboard-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    margin-top: 30px;
+}
+
+.section-card {
+    background-color: #f8f9fa; /* Light background for cards */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    display: flex; /* Make cards flex containers */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-card h3 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Table Styles (for Complaints and Users) */
+.complaints-table-container,
+.users-table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove double borders */
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+table thead th {
+    background-color: #ecf0f1; /* Light header background */
+    color: #34495e;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+table tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle; /* Align content vertically */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8f8f8; /* Zebra striping for rows */
+}
+
+table tbody tr:hover {
+    background-color: #e9f5fd; /* Light blue on row hover */
+}
+
+/* Status Badges */
+.status-new {
+    background-color: #e74c3c; /* Red */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.status-in-progress {
+    background-color: #f39c12; /* Orange */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.status-resolved {
+    background-color: #2ecc71; /* Green */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.status-active {
+    background-color: #27ae60; /* Darker Green */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.status-inactive {
+    background-color: #95a5a6; /* Grey */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Action Buttons within Tables */
+.view-btn, .resolve-btn, .delete-btn, .reset-password-btn, .deactivate-btn, .activate-btn {
+    background-color: #3498db; /* Default blue */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.view-btn:hover { background-color: #2980b9; }
+.resolve-btn { background-color: #2ecc71; }
+.resolve-btn:hover { background-color: #27ae60; }
+.delete-btn { background-color: #e74c3c; }
+.delete-btn:hover { background-color: #c0392b; }
+.reset-password-btn { background-color: #f39c12; }
+.reset-password-btn:hover { background-color: #e67e22; }
+.deactivate-btn { background-color: #7f8c8d; }
+.deactivate-btn:hover { background-color: #95a5a6; }
+.activate-btn { background-color: #1abc9c; } /* Turquoise */
+.activate-btn:hover { background-color: #16a085; }
+
+
+/* Primary Call-to-Action Buttons */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 25px;
+    display: inline-block; /* Allows margin auto for centering */
+    text-align: center;
+    text-decoration: none; /* For link-buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+/* Announcement Form */
+.announcement-form {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.announcement-form .input-group {
+    margin-bottom: 15px;
+}
+
+.announcement-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.announcement-form input[type="text"],
+.announcement-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.announcement-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.announcement-form input[type="text"]:focus,
+.announcement-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Current Announcements List (Admin View) */
+.current-announcements-list {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.current-announcements-list li {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.announcement-list-item-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1em;
+    flex-grow: 1; /* Allow title to take up space */
+}
+
+.announcement-list-item-date {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-left: 15px;
+    white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* General improvements for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .website-name {
+        margin-bottom: 10px;
+    }
+
+    .admin-nav {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .dashboard-sections {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+    }
+
+    .section-card {
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+
+    table, .complaints-table-container, .users-table-container {
+        display: block; /* Allows table to be more flexible */
+        width: 100%;
+    }
+
+    table thead {
+        display: none; /* Hide table headers on small screens */
+    }
+
+    table tbody, table tr, table td {
+        display: block; /* Make table rows and cells behave like blocks */
+        width: 100%;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label); /* Use data-label for pseudo-elements */
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* Adjust specific table cells for responsive labels */
+    table tbody td:nth-of-type(1)::before { content: "ID:"; }
+    table tbody td:nth-of-type(2)::before { content: "Complainant:"; }
+    table tbody td:nth-of-type(3)::before { content: "Subject:"; }
+    table tbody td:nth-of-type(4)::before { content: "Date:"; }
+    table tbody td:nth-of-type(5)::before { content: "Status:"; }
+    table tbody td:nth-of-type(6)::before { content: "Actions:"; }
+
+    /* For User Table */
+    table tbody td:nth-of-type(1)::before { content: "ID:"; }
+    table tbody td:nth-of-type(2)::before { content: "Username:"; }
+    table tbody td:nth-of-type(3)::before { content: "Apartment/Unit:"; }
+    table tbody td:nth-of-type(4)::before { content: "Status:"; }
+    table tbody td:nth-of-type(5)::before { content: "Actions:"; }
+}
